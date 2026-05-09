@@ -1,0 +1,2608 @@
+{
+  "entity": {
+    "name": "Apple Inc.",
+    "ticker": "AAPL",
+    "exchange": "The Nasdaq Stock Market LLC",
+    "cik": "0000320193",
+    "country": "California",
+    "fiscal_year_end": "09-28",
+    "reporting_currency": "USD",
+    "accounting_standard": "US-GAAP"
+  },
+  "filing": {
+    "form": "FORM 10-K",
+    "fiscal_year": 2024,
+    "period_end": "2024-09-28",
+    "filing_date": "2024-11-01",
+    "auditor": "Ernst & Young LLP",
+    "source_pdf": "apple_fy2024_10k.pdf"
+  },
+  "periods": {
+    "FY2024": {
+      "type": "duration",
+      "start": "2023-10-01",
+      "end": "2024-09-28"
+    },
+    "FY2023": {
+      "type": "duration",
+      "start": "2022-09-25",
+      "end": "2023-09-30"
+    },
+    "FY2022": {
+      "type": "duration",
+      "start": "2021-09-26",
+      "end": "2022-09-24"
+    },
+    "instant_2024-09-28": {
+      "type": "instant",
+      "date": "2024-09-28"
+    },
+    "instant_2023-09-30": {
+      "type": "instant",
+      "date": "2023-09-30"
+    },
+    "instant_2022-09-24": {
+      "type": "instant",
+      "date": "2022-09-24"
+    },
+    "instant_2021-09-25": {
+      "type": "instant",
+      "date": "2021-09-25"
+    },
+    "instant_2024-10-18": {
+      "type": "instant",
+      "date": "2024-10-18"
+    },
+    "instant_2024-03-29": {
+      "type": "instant",
+      "date": "2024-03-29"
+    },
+    "period_2024-06-30_2024-08-03": {
+      "type": "duration",
+      "start": "2024-06-30",
+      "end": "2024-08-03"
+    },
+    "period_2024-08-04_2024-08-31": {
+      "type": "duration",
+      "start": "2024-08-04",
+      "end": "2024-08-31"
+    },
+    "period_2024-09-01_2024-09-28": {
+      "type": "duration",
+      "start": "2024-09-01",
+      "end": "2024-09-28"
+    },
+    "Q4_2024": {
+      "type": "duration",
+      "start": "2024-06-30",
+      "end": "2024-09-28"
+    }
+  },
+  "facts": [
+    {
+      "canonical": "CommonStockParValue",
+      "concept": "us-gaap:ParOrStatedValuePerShare",
+      "label": "Common Stock, $0.00001 par value per share",
+      "value": 1e-05,
+      "unit": "USD/share",
+      "scale": "actual",
+      "period": "instant_2024-09-28",
+      "statement": "Cover",
+      "page": 1
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:AggregateMarketValueVotingAndNonvotingStockHeldByNonaffiliates",
+      "label": "The aggregate market value of the voting and non-voting stock held by non-affiliates of the Registrant",
+      "value": 2628553000000,
+      "unit": "USD",
+      "scale": "actual",
+      "period": "instant_2024-03-29",
+      "statement": "Cover",
+      "page": 2
+    },
+    {
+      "canonical": "CommonSharesOutstanding",
+      "concept": "us-gaap:CommonStockSharesOutstanding",
+      "label": "shares of common stock were issued and outstanding",
+      "value": 15115823000,
+      "unit": "shares",
+      "scale": "actual",
+      "period": "instant_2024-10-18",
+      "statement": "Cover",
+      "page": 2
+    },
+    {
+      "canonical": "NumberOfEmployees",
+      "concept": "us-gaap:NumberOfEmployees",
+      "label": "full-time equivalent employees",
+      "value": 164000,
+      "unit": "pure",
+      "scale": "actual",
+      "period": "instant_2024-09-28",
+      "statement": "Note_HumanCapital",
+      "page": 7
+    },
+    {
+      "canonical": "NumberOfShareholdersOfRecord",
+      "concept": "us-gaap:ShareholdersOfRecord",
+      "label": "shareholders of record",
+      "value": 23301,
+      "unit": "pure",
+      "scale": "actual",
+      "period": "instant_2024-10-18",
+      "statement": "Note_5_MarketForRegistrantsCommonEquity",
+      "page": 22
+    },
+    {
+      "canonical": "SharesRepurchased",
+      "concept": "us-gaap:RepurchasedAndRetiredStockShares",
+      "label": "Open market and privately negotiated purchases",
+      "value": 35697,
+      "unit": "shares",
+      "scale": "thousands",
+      "period": "period_2024-06-30_2024-08-03",
+      "statement": "Note_5_MarketForRegistrantsCommonEquity",
+      "page": 22
+    },
+    {
+      "canonical": null,
+      "concept": "custom:AveragePricePaidPerShareRepurchased",
+      "label": "Average Price Paid Per Share",
+      "value": 224.11,
+      "unit": "USD/share",
+      "scale": "actual",
+      "period": "period_2024-06-30_2024-08-03",
+      "statement": "Note_5_MarketForRegistrantsCommonEquity",
+      "page": 22
+    },
+    {
+      "canonical": "SharesRepurchased",
+      "concept": "us-gaap:RepurchasedAndRetiredStockShares",
+      "label": "Open market and privately negotiated purchases",
+      "value": 42910,
+      "unit": "shares",
+      "scale": "thousands",
+      "period": "period_2024-08-04_2024-08-31",
+      "statement": "Note_5_MarketForRegistrantsCommonEquity",
+      "page": 22
+    },
+    {
+      "canonical": null,
+      "concept": "custom:AveragePricePaidPerShareRepurchased",
+      "label": "Average Price Paid Per Share",
+      "value": 221.39,
+      "unit": "USD/share",
+      "scale": "actual",
+      "period": "period_2024-08-04_2024-08-31",
+      "statement": "Note_5_MarketForRegistrantsCommonEquity",
+      "page": 22
+    },
+    {
+      "canonical": "SharesRepurchased",
+      "concept": "us-gaap:RepurchasedAndRetiredStockShares",
+      "label": "Open market and privately negotiated purchases",
+      "value": 33653,
+      "unit": "shares",
+      "scale": "thousands",
+      "period": "period_2024-09-01_2024-09-28",
+      "statement": "Note_5_MarketForRegistrantsCommonEquity",
+      "page": 22
+    },
+    {
+      "canonical": null,
+      "concept": "custom:AveragePricePaidPerShareRepurchased",
+      "label": "Average Price Paid Per Share",
+      "value": 222.86,
+      "unit": "USD/share",
+      "scale": "actual",
+      "period": "period_2024-09-01_2024-09-28",
+      "statement": "Note_5_MarketForRegistrantsCommonEquity",
+      "page": 22
+    },
+    {
+      "canonical": "SharesRepurchased",
+      "concept": "us-gaap:RepurchasedAndRetiredStockShares",
+      "label": "Total",
+      "value": 112260,
+      "unit": "shares",
+      "scale": "thousands",
+      "period": "Q4_2024",
+      "statement": "Note_5_MarketForRegistrantsCommonEquity",
+      "page": 22
+    },
+    {
+      "canonical": "ShareRepurchaseAuthorization",
+      "concept": "us-gaap:StockRepurchaseProgramAuthorizedAmount1",
+      "label": "Approximate Dollar Value of Shares That May Yet Be Purchased Under the Plans or Programs",
+      "value": 89074,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_5_MarketForRegistrantsCommonEquity",
+      "page": 22
+    },
+    {
+      "canonical": "ShareRepurchaseAuthorization",
+      "concept": "us-gaap:StockRepurchaseProgramAuthorizedAmount1",
+      "label": "share repurchase program announced on May 2, 2024",
+      "value": 110,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_5_MarketForRegistrantsCommonEquity",
+      "page": 22
+    },
+    {
+      "canonical": "SegmentRevenue",
+      "concept": "us-gaap:SegmentRevenue",
+      "label": "Americas",
+      "value": 167045,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25,
+      "dimensions": {
+        "us-gaap:ReportableSegmentAxis": "custom:AmericasMember"
+      }
+    },
+    {
+      "canonical": "SegmentRevenue",
+      "concept": "us-gaap:SegmentRevenue",
+      "label": "Americas",
+      "value": 162560,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25,
+      "dimensions": {
+        "us-gaap:ReportableSegmentAxis": "custom:AmericasMember"
+      }
+    },
+    {
+      "canonical": "SegmentRevenue",
+      "concept": "us-gaap:SegmentRevenue",
+      "label": "Americas",
+      "value": 169658,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25,
+      "dimensions": {
+        "us-gaap:ReportableSegmentAxis": "custom:AmericasMember"
+      }
+    },
+    {
+      "canonical": "SegmentRevenue",
+      "concept": "us-gaap:SegmentRevenue",
+      "label": "Europe",
+      "value": 101328,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25,
+      "dimensions": {
+        "us-gaap:ReportableSegmentAxis": "custom:EuropeMember"
+      }
+    },
+    {
+      "canonical": "SegmentRevenue",
+      "concept": "us-gaap:SegmentRevenue",
+      "label": "Europe",
+      "value": 94294,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25,
+      "dimensions": {
+        "us-gaap:ReportableSegmentAxis": "custom:EuropeMember"
+      }
+    },
+    {
+      "canonical": "SegmentRevenue",
+      "concept": "us-gaap:SegmentRevenue",
+      "label": "Europe",
+      "value": 95118,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25,
+      "dimensions": {
+        "us-gaap:ReportableSegmentAxis": "custom:EuropeMember"
+      }
+    },
+    {
+      "canonical": "SegmentRevenue",
+      "concept": "us-gaap:SegmentRevenue",
+      "label": "Greater China",
+      "value": 66952,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25,
+      "dimensions": {
+        "us-gaap:ReportableSegmentAxis": "custom:GreaterChinaMember"
+      }
+    },
+    {
+      "canonical": "SegmentRevenue",
+      "concept": "us-gaap:SegmentRevenue",
+      "label": "Greater China",
+      "value": 72559,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25,
+      "dimensions": {
+        "us-gaap:ReportableSegmentAxis": "custom:GreaterChinaMember"
+      }
+    },
+    {
+      "canonical": "SegmentRevenue",
+      "concept": "us-gaap:SegmentRevenue",
+      "label": "Greater China",
+      "value": 74200,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25,
+      "dimensions": {
+        "us-gaap:ReportableSegmentAxis": "custom:GreaterChinaMember"
+      }
+    },
+    {
+      "canonical": "SegmentRevenue",
+      "concept": "us-gaap:SegmentRevenue",
+      "label": "Japan",
+      "value": 25052,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25,
+      "dimensions": {
+        "us-gaap:ReportableSegmentAxis": "custom:JapanMember"
+      }
+    },
+    {
+      "canonical": "SegmentRevenue",
+      "concept": "us-gaap:SegmentRevenue",
+      "label": "Japan",
+      "value": 24257,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25,
+      "dimensions": {
+        "us-gaap:ReportableSegmentAxis": "custom:JapanMember"
+      }
+    },
+    {
+      "canonical": "SegmentRevenue",
+      "concept": "us-gaap:SegmentRevenue",
+      "label": "Japan",
+      "value": 25977,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25,
+      "dimensions": {
+        "us-gaap:ReportableSegmentAxis": "custom:JapanMember"
+      }
+    },
+    {
+      "canonical": "SegmentRevenue",
+      "concept": "us-gaap:SegmentRevenue",
+      "label": "Rest of Asia Pacific",
+      "value": 30658,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25,
+      "dimensions": {
+        "us-gaap:ReportableSegmentAxis": "custom:RestOfAsiaPacificMember"
+      }
+    },
+    {
+      "canonical": "SegmentRevenue",
+      "concept": "us-gaap:SegmentRevenue",
+      "label": "Rest of Asia Pacific",
+      "value": 29615,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25,
+      "dimensions": {
+        "us-gaap:ReportableSegmentAxis": "custom:RestOfAsiaPacificMember"
+      }
+    },
+    {
+      "canonical": "SegmentRevenue",
+      "concept": "us-gaap:SegmentRevenue",
+      "label": "Rest of Asia Pacific",
+      "value": 29375,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25,
+      "dimensions": {
+        "us-gaap:ReportableSegmentAxis": "custom:RestOfAsiaPacificMember"
+      }
+    },
+    {
+      "canonical": "Revenue",
+      "concept": "us-gaap:RevenueFromContractWithCustomer",
+      "label": "Total net sales",
+      "value": 391035,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25
+    },
+    {
+      "canonical": "Revenue",
+      "concept": "us-gaap:RevenueFromContractWithCustomer",
+      "label": "Total net sales",
+      "value": 383285,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25
+    },
+    {
+      "canonical": "Revenue",
+      "concept": "us-gaap:RevenueFromContractWithCustomer",
+      "label": "Total net sales",
+      "value": 394328,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_SegmentInformation",
+      "page": 25
+    },
+    {
+      "canonical": "ProductLineRevenue",
+      "concept": "custom:ProductLineRevenueIPhone",
+      "label": "iPhone",
+      "value": 201183,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 26,
+      "dimensions": {
+        "custom:ProductLineAxis": "custom:IPhoneMember"
+      }
+    },
+    {
+      "canonical": "ProductLineRevenue",
+      "concept": "custom:ProductLineRevenueIPhone",
+      "label": "iPhone",
+      "value": 200583,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 26,
+      "dimensions": {
+        "custom:ProductLineAxis": "custom:IPhoneMember"
+      }
+    },
+    {
+      "canonical": "ProductLineRevenue",
+      "concept": "custom:ProductLineRevenueIPhone",
+      "label": "iPhone",
+      "value": 205489,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 26,
+      "dimensions": {
+        "custom:ProductLineAxis": "custom:IPhoneMember"
+      }
+    },
+    {
+      "canonical": "ProductLineRevenue",
+      "concept": "custom:ProductLineRevenueMac",
+      "label": "Mac",
+      "value": 29984,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 26,
+      "dimensions": {
+        "custom:ProductLineAxis": "custom:MacMember"
+      }
+    },
+    {
+      "canonical": "ProductLineRevenue",
+      "concept": "custom:ProductLineRevenueMac",
+      "label": "Mac",
+      "value": 29357,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 26,
+      "dimensions": {
+        "custom:ProductLineAxis": "custom:MacMember"
+      }
+    },
+    {
+      "canonical": "ProductLineRevenue",
+      "concept": "custom:ProductLineRevenueMac",
+      "label": "Mac",
+      "value": 40177,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 26,
+      "dimensions": {
+        "custom:ProductLineAxis": "custom:MacMember"
+      }
+    },
+    {
+      "canonical": "ProductLineRevenue",
+      "concept": "custom:ProductLineRevenueIPad",
+      "label": "iPad",
+      "value": 26694,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 26,
+      "dimensions": {
+        "custom:ProductLineAxis": "custom:IPadMember"
+      }
+    },
+    {
+      "canonical": "ProductLineRevenue",
+      "concept": "custom:ProductLineRevenueIPad",
+      "label": "iPad",
+      "value": 28300,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 26,
+      "dimensions": {
+        "custom:ProductLineAxis": "custom:IPadMember"
+      }
+    },
+    {
+      "canonical": "ProductLineRevenue",
+      "concept": "custom:ProductLineRevenueIPad",
+      "label": "iPad",
+      "value": 29292,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 26,
+      "dimensions": {
+        "custom:ProductLineAxis": "custom:IPadMember"
+      }
+    },
+    {
+      "canonical": "ProductLineRevenue",
+      "concept": "custom:ProductLineRevenueWearablesHomeAndAccessories",
+      "label": "Wearables, Home and Accessories",
+      "value": 37005,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 26,
+      "dimensions": {
+        "custom:ProductLineAxis": "custom:WearablesHomeAndAccessoriesMember"
+      }
+    },
+    {
+      "canonical": "ProductLineRevenue",
+      "concept": "custom:ProductLineRevenueWearablesHomeAndAccessories",
+      "label": "Wearables, Home and Accessories",
+      "value": 39845,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 26,
+      "dimensions": {
+        "custom:ProductLineAxis": "custom:WearablesHomeAndAccessoriesMember"
+      }
+    },
+    {
+      "canonical": "ProductLineRevenue",
+      "concept": "custom:ProductLineRevenueWearablesHomeAndAccessories",
+      "label": "Wearables, Home and Accessories",
+      "value": 41241,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 26,
+      "dimensions": {
+        "custom:ProductLineAxis": "custom:WearablesHomeAndAccessoriesMember"
+      }
+    },
+    {
+      "canonical": "ProductLineRevenue",
+      "concept": "custom:ProductLineRevenueServices",
+      "label": "Services",
+      "value": 96169,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 26,
+      "dimensions": {
+        "custom:ProductLineAxis": "custom:ServicesMember"
+      }
+    },
+    {
+      "canonical": "ProductLineRevenue",
+      "concept": "custom:ProductLineRevenueServices",
+      "label": "Services",
+      "value": 85200,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 26,
+      "dimensions": {
+        "custom:ProductLineAxis": "custom:ServicesMember"
+      }
+    },
+    {
+      "canonical": "ProductLineRevenue",
+      "concept": "custom:ProductLineRevenueServices",
+      "label": "Services",
+      "value": 78129,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 26,
+      "dimensions": {
+        "custom:ProductLineAxis": "custom:ServicesMember"
+      }
+    },
+    {
+      "canonical": "Revenue",
+      "concept": "us-gaap:RevenueFromContractWithCustomer",
+      "label": "Total net sales",
+      "value": 391035,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 26
+    },
+    {
+      "canonical": "Revenue",
+      "concept": "us-gaap:RevenueFromContractWithCustomer",
+      "label": "Total net sales",
+      "value": 383285,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 26
+    },
+    {
+      "canonical": "Revenue",
+      "concept": "us-gaap:RevenueFromContractWithCustomer",
+      "label": "Total net sales",
+      "value": 394328,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 26
+    },
+    {
+      "canonical": "GrossProfit",
+      "concept": "us-gaap:GrossProfit",
+      "label": "Products",
+      "value": 109633,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 27,
+      "dimensions": {
+        "custom:ProductOrServiceAxis": "custom:ProductsMember"
+      }
+    },
+    {
+      "canonical": "GrossProfit",
+      "concept": "us-gaap:GrossProfit",
+      "label": "Products",
+      "value": 108803,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 27,
+      "dimensions": {
+        "custom:ProductOrServiceAxis": "custom:ProductsMember"
+      }
+    },
+    {
+      "canonical": "GrossProfit",
+      "concept": "us-gaap:GrossProfit",
+      "label": "Products",
+      "value": 114728,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 27,
+      "dimensions": {
+        "custom:ProductOrServiceAxis": "custom:ProductsMember"
+      }
+    },
+    {
+      "canonical": "GrossProfit",
+      "concept": "us-gaap:GrossProfit",
+      "label": "Services",
+      "value": 71050,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 27,
+      "dimensions": {
+        "custom:ProductOrServiceAxis": "custom:ServicesMember"
+      }
+    },
+    {
+      "canonical": "GrossProfit",
+      "concept": "us-gaap:GrossProfit",
+      "label": "Services",
+      "value": 60345,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 27,
+      "dimensions": {
+        "custom:ProductOrServiceAxis": "custom:ServicesMember"
+      }
+    },
+    {
+      "canonical": "GrossProfit",
+      "concept": "us-gaap:GrossProfit",
+      "label": "Services",
+      "value": 56054,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 27,
+      "dimensions": {
+        "custom:ProductOrServiceAxis": "custom:ServicesMember"
+      }
+    },
+    {
+      "canonical": "GrossProfit",
+      "concept": "us-gaap:GrossProfit",
+      "label": "Total gross margin",
+      "value": 180683,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": "GrossProfit",
+      "concept": "us-gaap:GrossProfit",
+      "label": "Total gross margin",
+      "value": 169148,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": "GrossProfit",
+      "concept": "us-gaap:GrossProfit",
+      "label": "Total gross margin",
+      "value": 170782,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:GrossMarginPercentage",
+      "label": "Products",
+      "value": 37.2,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 27,
+      "dimensions": {
+        "custom:ProductOrServiceAxis": "custom:ProductsMember"
+      }
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:GrossMarginPercentage",
+      "label": "Products",
+      "value": 36.5,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 27,
+      "dimensions": {
+        "custom:ProductOrServiceAxis": "custom:ProductsMember"
+      }
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:GrossMarginPercentage",
+      "label": "Products",
+      "value": 36.3,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 27,
+      "dimensions": {
+        "custom:ProductOrServiceAxis": "custom:ProductsMember"
+      }
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:GrossMarginPercentage",
+      "label": "Services",
+      "value": 73.9,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 27,
+      "dimensions": {
+        "custom:ProductOrServiceAxis": "custom:ServicesMember"
+      }
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:GrossMarginPercentage",
+      "label": "Services",
+      "value": 70.8,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 27,
+      "dimensions": {
+        "custom:ProductOrServiceAxis": "custom:ServicesMember"
+      }
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:GrossMarginPercentage",
+      "label": "Services",
+      "value": 71.7,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 27,
+      "dimensions": {
+        "custom:ProductOrServiceAxis": "custom:ServicesMember"
+      }
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:GrossMarginPercentage",
+      "label": "Total gross margin percentage",
+      "value": 46.2,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:GrossMarginPercentage",
+      "label": "Total gross margin percentage",
+      "value": 44.1,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:GrossMarginPercentage",
+      "label": "Total gross margin percentage",
+      "value": 43.3,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": "ResearchAndDevelopmentExpense",
+      "concept": "us-gaap:ResearchAndDevelopmentExpense",
+      "label": "Research and development",
+      "value": 31370,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": "ResearchAndDevelopmentExpense",
+      "concept": "us-gaap:ResearchAndDevelopmentExpense",
+      "label": "Research and development",
+      "value": 29915,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": "ResearchAndDevelopmentExpense",
+      "concept": "us-gaap:ResearchAndDevelopmentExpense",
+      "label": "Research and development",
+      "value": 26251,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": null,
+      "concept": "custom:ResearchAndDevelopmentExpenseAsPercentageOfSales",
+      "label": "Percentage of total net sales",
+      "value": 8,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": null,
+      "concept": "custom:ResearchAndDevelopmentExpenseAsPercentageOfSales",
+      "label": "Percentage of total net sales",
+      "value": 8,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": null,
+      "concept": "custom:ResearchAndDevelopmentExpenseAsPercentageOfSales",
+      "label": "Percentage of total net sales",
+      "value": 7,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": "SellingGeneralAndAdministrative",
+      "concept": "us-gaap:SellingGeneralAndAdministrativeExpense",
+      "label": "Selling, general and administrative",
+      "value": 26097,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": "SellingGeneralAndAdministrative",
+      "concept": "us-gaap:SellingGeneralAndAdministrativeExpense",
+      "label": "Selling, general and administrative",
+      "value": 24932,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": "SellingGeneralAndAdministrative",
+      "concept": "us-gaap:SellingGeneralAndAdministrativeExpense",
+      "label": "Selling, general and administrative",
+      "value": 25094,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": "OperatingExpensesTotal",
+      "concept": "us-gaap:OperatingExpenses",
+      "label": "Total operating expenses",
+      "value": 57467,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": "OperatingExpensesTotal",
+      "concept": "us-gaap:OperatingExpenses",
+      "label": "Total operating expenses",
+      "value": 54847,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": "OperatingExpensesTotal",
+      "concept": "us-gaap:OperatingExpenses",
+      "label": "Total operating expenses",
+      "value": 51345,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 27
+    },
+    {
+      "canonical": "IncomeTaxExpense",
+      "concept": "us-gaap:IncomeTaxExpenseBenefit",
+      "label": "Provision for income taxes",
+      "value": 29749,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": "IncomeTaxExpense",
+      "concept": "us-gaap:IncomeTaxExpenseBenefit",
+      "label": "Provision for income taxes",
+      "value": 16741,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": "IncomeTaxExpense",
+      "concept": "us-gaap:IncomeTaxExpenseBenefit",
+      "label": "Provision for income taxes",
+      "value": 19300,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": "EffectiveTaxRate",
+      "concept": "us-gaap:EffectiveIncomeTaxRate",
+      "label": "Effective tax rate",
+      "value": 24.1,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": "EffectiveTaxRate",
+      "concept": "us-gaap:EffectiveIncomeTaxRate",
+      "label": "Effective tax rate",
+      "value": 14.7,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": "EffectiveTaxRate",
+      "concept": "us-gaap:EffectiveIncomeTaxRate",
+      "label": "Effective tax rate",
+      "value": 16.2,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": "StatutoryTaxRate",
+      "concept": "us-gaap:StatutoryFederalIncomeTaxRate",
+      "label": "Statutory federal income tax rate",
+      "value": 21,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": "StatutoryTaxRate",
+      "concept": "us-gaap:StatutoryFederalIncomeTaxRate",
+      "label": "Statutory federal income tax rate",
+      "value": 21,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2023",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": "StatutoryTaxRate",
+      "concept": "us-gaap:StatutoryFederalIncomeTaxRate",
+      "label": "Statutory federal income tax rate",
+      "value": 21,
+      "unit": "percent",
+      "scale": "actual",
+      "period": "FY2022",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": null,
+      "concept": "custom:UnrestrictedCashAndMarketableSecurities",
+      "label": "unrestricted cash, cash equivalents and marketable securities",
+      "value": 140.8,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": "TermDebtPrincipal",
+      "concept": "us-gaap:LongTermDebtNotesAndOtherNotes",
+      "label": "outstanding fixed-rate notes with varying maturities for an aggregate principal amount",
+      "value": 97.3,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": "ShortTermDebt",
+      "concept": "us-gaap:LongTermDebtCurrentMaturities",
+      "label": "outstanding fixed-rate notes payable within 12 months",
+      "value": 10.9,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": "InterestExpense",
+      "concept": "us-gaap:InterestExpense",
+      "label": "Future interest payments associated with the Notes total",
+      "value": 38.5,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": null,
+      "concept": "custom:InterestPayableCurrent",
+      "label": "Future interest payments associated with the Notes payable within 12 months",
+      "value": 2.6,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": "CommercialPaper",
+      "concept": "us-gaap:CommercialPaper",
+      "label": "commercial paper outstanding",
+      "value": 10,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:LeaseAndRentalCommitments",
+      "label": "fixed lease payment obligations",
+      "value": 15.6,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": "OperatingLeaseLiabilityCurrent",
+      "concept": "us-gaap:OperatingLeaseLiabilityCurrent",
+      "label": "fixed lease payment obligations payable within 12 months",
+      "value": 2,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:UnconditionalPurchaseObligations",
+      "label": "manufacturing purchase obligations",
+      "value": 53,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": null,
+      "concept": "custom:ManufacturingPurchaseObligationsCurrent",
+      "label": "manufacturing purchase obligations payable within 12 months",
+      "value": 52.9,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:UnconditionalPurchaseObligations",
+      "label": "other purchase obligations",
+      "value": 12,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": null,
+      "concept": "custom:OtherPurchaseObligationsCurrent",
+      "label": "other purchase obligations payable within 12 months",
+      "value": 4.1,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:TaxCutsAndJobsActOf2017RepatriationTaxLiability",
+      "label": "balance of the deemed repatriation tax payable",
+      "value": 16.5,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:TaxCutsAndJobsActOf2017RepatriationTaxLiabilityCurrent",
+      "label": "deemed repatriation tax payable expected to be paid within 12 months",
+      "value": 7.2,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 28
+    },
+    {
+      "canonical": null,
+      "concept": "custom:StateAidDecisionTaxPayable",
+      "label": "obligation to pay to Ireland in connection with the State Aid Decision",
+      "value": 14.2,
+      "unit": "EUR",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 29
+    },
+    {
+      "canonical": null,
+      "concept": "custom:StateAidDecisionTaxPayable",
+      "label": "obligation to pay to Ireland in connection with the State Aid Decision",
+      "value": 15.8,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 29
+    },
+    {
+      "canonical": "DividendsPerShareDeclared",
+      "concept": "us-gaap:DividendsDeclaredPerShareCommonStock",
+      "label": "quarterly cash dividend",
+      "value": 0.25,
+      "unit": "USD/share",
+      "scale": "actual",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7_MDAndA",
+      "page": 29
+    },
+    {
+      "canonical": "ShareRepurchaseAuthorization",
+      "concept": "us-gaap:StockRepurchaseProgramAuthorizedAmount1",
+      "label": "new share repurchase program",
+      "value": 110,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "instant_2024-05-01",
+      "statement": "Note_7_MDAndA",
+      "page": 29
+    },
+    {
+      "canonical": "ValueOfSharesRepurchased",
+      "concept": "us-gaap:PaymentsForRepurchaseOfCommonStock",
+      "label": "repurchased of its common stock",
+      "value": 95,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 29
+    },
+    {
+      "canonical": "DividendsPaidCF",
+      "concept": "us-gaap:PaymentsOfDividends",
+      "label": "paid dividends and dividend equivalents",
+      "value": 15.2,
+      "unit": "USD",
+      "scale": "billions",
+      "period": "FY2024",
+      "statement": "Note_7_MDAndA",
+      "page": 29
+    },
+    {
+      "canonical": null,
+      "concept": "custom:InterestRateSensitivityOfInvestmentPortfolioFairValue",
+      "label": "Decline in fair value",
+      "value": 2755,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7A_QuantitativeAndQualitativeDisclosuresAboutMarketRisk",
+      "page": 30,
+      "dimensions": {
+        "custom:SensitiveInstrumentAxis": "custom:InvestmentPortfolioMember"
+      }
+    },
+    {
+      "canonical": null,
+      "concept": "custom:InterestRateSensitivityOfInvestmentPortfolioFairValue",
+      "label": "Decline in fair value",
+      "value": 3089,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2023-09-30",
+      "statement": "Note_7A_QuantitativeAndQualitativeDisclosuresAboutMarketRisk",
+      "page": 30,
+      "dimensions": {
+        "custom:SensitiveInstrumentAxis": "custom:InvestmentPortfolioMember"
+      }
+    },
+    {
+      "canonical": null,
+      "concept": "custom:InterestRateSensitivityOfTermDebtInterestExpense",
+      "label": "Increase in annual interest expense",
+      "value": 139,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7A_QuantitativeAndQualitativeDisclosuresAboutMarketRisk",
+      "page": 30,
+      "dimensions": {
+        "custom:SensitiveInstrumentAxis": "custom:TermDebtMember"
+      }
+    },
+    {
+      "canonical": null,
+      "concept": "custom:InterestRateSensitivityOfTermDebtInterestExpense",
+      "label": "Increase in annual interest expense",
+      "value": 194,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2023-09-30",
+      "statement": "Note_7A_QuantitativeAndQualitativeDisclosuresAboutMarketRisk",
+      "page": 30,
+      "dimensions": {
+        "custom:SensitiveInstrumentAxis": "custom:TermDebtMember"
+      }
+    },
+    {
+      "canonical": null,
+      "concept": "custom:ForeignExchangeRateRiskValueAtRisk",
+      "label": "maximum one-day loss in fair value",
+      "value": 538,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2024-09-28",
+      "statement": "Note_7A_QuantitativeAndQualitativeDisclosuresAboutMarketRisk",
+      "page": 30
+    },
+    {
+      "canonical": null,
+      "concept": "custom:ForeignExchangeRateRiskValueAtRisk",
+      "label": "maximum one-day loss in fair value",
+      "value": 669,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2023-09-30",
+      "statement": "Note_7A_QuantitativeAndQualitativeDisclosuresAboutMarketRisk",
+      "page": 30
+    },
+    {
+      "canonical": "RevenueProducts",
+      "concept": "us-gaap:ProductSales",
+      "label": "Products",
+      "value": 294866,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "RevenueProducts",
+      "concept": "us-gaap:ProductSales",
+      "label": "Products",
+      "value": 298085,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "RevenueProducts",
+      "concept": "us-gaap:ProductSales",
+      "label": "Products",
+      "value": 316199,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "RevenueServices",
+      "concept": "us-gaap:ServiceAndOtherSales",
+      "label": "Services",
+      "value": 96169,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "RevenueServices",
+      "concept": "us-gaap:ServiceAndOtherSales",
+      "label": "Services",
+      "value": 85200,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "RevenueServices",
+      "concept": "us-gaap:ServiceAndOtherSales",
+      "label": "Services",
+      "value": 78129,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "Revenue",
+      "concept": "us-gaap:RevenueFromContractWithCustomer",
+      "label": "Total net sales",
+      "value": 391035,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "Revenue",
+      "concept": "us-gaap:RevenueFromContractWithCustomer",
+      "label": "Total net sales",
+      "value": 383285,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "Revenue",
+      "concept": "us-gaap:RevenueFromContractWithCustomer",
+      "label": "Total net sales",
+      "value": 394328,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "CostOfRevenueProducts",
+      "concept": "us-gaap:CostOfProducts",
+      "label": "Products",
+      "value": 185233,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "CostOfRevenueProducts",
+      "concept": "us-gaap:CostOfProducts",
+      "label": "Products",
+      "value": 189282,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "CostOfRevenueProducts",
+      "concept": "us-gaap:CostOfProducts",
+      "label": "Products",
+      "value": 201471,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "CostOfRevenueServices",
+      "concept": "us-gaap:CostOfServices",
+      "label": "Services",
+      "value": 25119,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "CostOfRevenueServices",
+      "concept": "us-gaap:CostOfServices",
+      "label": "Services",
+      "value": 24855,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "CostOfRevenueServices",
+      "concept": "us-gaap:CostOfServices",
+      "label": "Services",
+      "value": 22075,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "CostOfRevenue",
+      "concept": "us-gaap:CostOfRevenue",
+      "label": "Total cost of sales",
+      "value": 210352,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "CostOfRevenue",
+      "concept": "us-gaap:CostOfRevenue",
+      "label": "Total cost of sales",
+      "value": 214137,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "CostOfRevenue",
+      "concept": "us-gaap:CostOfRevenue",
+      "label": "Total cost of sales",
+      "value": 223546,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "GrossProfit",
+      "concept": "us-gaap:GrossProfit",
+      "label": "Gross margin",
+      "value": 180683,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "GrossProfit",
+      "concept": "us-gaap:GrossProfit",
+      "label": "Gross margin",
+      "value": 169148,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "GrossProfit",
+      "concept": "us-gaap:GrossProfit",
+      "label": "Gross margin",
+      "value": 170782,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "ResearchAndDevelopmentExpense",
+      "concept": "us-gaap:ResearchAndDevelopmentExpense",
+      "label": "Research and development",
+      "value": 31370,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "ResearchAndDevelopmentExpense",
+      "concept": "us-gaap:ResearchAndDevelopmentExpense",
+      "label": "Research and development",
+      "value": 29915,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "ResearchAndDevelopmentExpense",
+      "concept": "us-gaap:ResearchAndDevelopmentExpense",
+      "label": "Research and development",
+      "value": 26251,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "SellingGeneralAndAdministrative",
+      "concept": "us-gaap:SellingGeneralAndAdministrativeExpense",
+      "label": "Selling, general and administrative",
+      "value": 26097,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "SellingGeneralAndAdministrative",
+      "concept": "us-gaap:SellingGeneralAndAdministrativeExpense",
+      "label": "Selling, general and administrative",
+      "value": 24932,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "SellingGeneralAndAdministrative",
+      "concept": "us-gaap:SellingGeneralAndAdministrativeExpense",
+      "label": "Selling, general and administrative",
+      "value": 25094,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "OperatingExpensesTotal",
+      "concept": "us-gaap:OperatingExpenses",
+      "label": "Total operating expenses",
+      "value": 57467,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "OperatingExpensesTotal",
+      "concept": "us-gaap:OperatingExpenses",
+      "label": "Total operating expenses",
+      "value": 54847,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "OperatingExpensesTotal",
+      "concept": "us-gaap:OperatingExpenses",
+      "label": "Total operating expenses",
+      "value": 51345,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "OperatingIncome",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "label": "Operating income",
+      "value": 123216,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "OperatingIncome",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "label": "Operating income",
+      "value": 114301,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "OperatingIncome",
+      "concept": "us-gaap:OperatingIncomeLoss",
+      "label": "Operating income",
+      "value": 119437,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "OtherNonOperatingIncome",
+      "concept": "us-gaap:NonoperatingIncomeExpense",
+      "label": "Other income/(expense), net",
+      "value": 269,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "OtherNonOperatingIncome",
+      "concept": "us-gaap:NonoperatingIncomeExpense",
+      "label": "Other income/(expense), net",
+      "value": -565,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "OtherNonOperatingIncome",
+      "concept": "us-gaap:NonoperatingIncomeExpense",
+      "label": "Other income/(expense), net",
+      "value": -334,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "IncomeBeforeTax",
+      "concept": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxExpenseBenefit",
+      "label": "Income before provision for income taxes",
+      "value": 123485,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "IncomeBeforeTax",
+      "concept": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxExpenseBenefit",
+      "label": "Income before provision for income taxes",
+      "value": 113736,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "IncomeBeforeTax",
+      "concept": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxExpenseBenefit",
+      "label": "Income before provision for income taxes",
+      "value": 119103,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "IncomeTaxExpense",
+      "concept": "us-gaap:IncomeTaxExpenseBenefit",
+      "label": "Provision for income taxes",
+      "value": 29749,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "IncomeTaxExpense",
+      "concept": "us-gaap:IncomeTaxExpenseBenefit",
+      "label": "Provision for income taxes",
+      "value": 16741,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "IncomeTaxExpense",
+      "concept": "us-gaap:IncomeTaxExpenseBenefit",
+      "label": "Provision for income taxes",
+      "value": 19300,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "NetIncome",
+      "concept": "us-gaap:NetIncomeLoss",
+      "label": "Net income",
+      "value": 93736,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "NetIncome",
+      "concept": "us-gaap:NetIncomeLoss",
+      "label": "Net income",
+      "value": 96995,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "NetIncome",
+      "concept": "us-gaap:NetIncomeLoss",
+      "label": "Net income",
+      "value": 99803,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "EarningsPerShareBasic",
+      "concept": "us-gaap:EarningsPerShareBasic",
+      "label": "Basic",
+      "value": 6.11,
+      "unit": "USD/share",
+      "scale": "actual",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "EarningsPerShareBasic",
+      "concept": "us-gaap:EarningsPerShareBasic",
+      "label": "Basic",
+      "value": 6.16,
+      "unit": "USD/share",
+      "scale": "actual",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "EarningsPerShareBasic",
+      "concept": "us-gaap:EarningsPerShareBasic",
+      "label": "Basic",
+      "value": 6.15,
+      "unit": "USD/share",
+      "scale": "actual",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "EarningsPerShareDiluted",
+      "concept": "us-gaap:EarningsPerShareDiluted",
+      "label": "Diluted",
+      "value": 6.08,
+      "unit": "USD/share",
+      "scale": "actual",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "EarningsPerShareDiluted",
+      "concept": "us-gaap:EarningsPerShareDiluted",
+      "label": "Diluted",
+      "value": 6.13,
+      "unit": "USD/share",
+      "scale": "actual",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "EarningsPerShareDiluted",
+      "concept": "us-gaap:EarningsPerShareDiluted",
+      "label": "Diluted",
+      "value": 6.11,
+      "unit": "USD/share",
+      "scale": "actual",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "WeightedAverageSharesBasic",
+      "concept": "us-gaap:WeightedAverageNumberOfSharesOutstandingBasic",
+      "label": "Basic",
+      "value": 15343783,
+      "unit": "shares",
+      "scale": "thousands",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "WeightedAverageSharesBasic",
+      "concept": "us-gaap:WeightedAverageNumberOfSharesOutstandingBasic",
+      "label": "Basic",
+      "value": 15744231,
+      "unit": "shares",
+      "scale": "thousands",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "WeightedAverageSharesBasic",
+      "concept": "us-gaap:WeightedAverageNumberOfSharesOutstandingBasic",
+      "label": "Basic",
+      "value": 16215963,
+      "unit": "shares",
+      "scale": "thousands",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "WeightedAverageSharesDiluted",
+      "concept": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+      "label": "Diluted",
+      "value": 15408095,
+      "unit": "shares",
+      "scale": "thousands",
+      "period": "FY2024",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "WeightedAverageSharesDiluted",
+      "concept": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+      "label": "Diluted",
+      "value": 15812547,
+      "unit": "shares",
+      "scale": "thousands",
+      "period": "FY2023",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "WeightedAverageSharesDiluted",
+      "concept": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+      "label": "Diluted",
+      "value": 16325819,
+      "unit": "shares",
+      "scale": "thousands",
+      "period": "FY2022",
+      "statement": "IncomeStatement",
+      "page": 32
+    },
+    {
+      "canonical": "NetIncome",
+      "concept": "us-gaap:NetIncomeLoss",
+      "label": "Net income",
+      "value": 93736,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "NetIncome",
+      "concept": "us-gaap:NetIncomeLoss",
+      "label": "Net income",
+      "value": 96995,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "NetIncome",
+      "concept": "us-gaap:NetIncomeLoss",
+      "label": "Net income",
+      "value": 99803,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "ForeignCurrencyTranslation",
+      "concept": "us-gaap:OtherComprehensiveIncomeForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax",
+      "label": "Change in foreign currency translation, net of tax",
+      "value": 395,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "ForeignCurrencyTranslation",
+      "concept": "us-gaap:OtherComprehensiveIncomeForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax",
+      "label": "Change in foreign currency translation, net of tax",
+      "value": -765,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "ForeignCurrencyTranslation",
+      "concept": "us-gaap:OtherComprehensiveIncomeForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax",
+      "label": "Change in foreign currency translation, net of tax",
+      "value": -1511,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:OtherComprehensiveIncomeDerivativesChangeInFairValue",
+      "label": "Change in fair value of derivative instruments",
+      "value": -832,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:OtherComprehensiveIncomeDerivativesChangeInFairValue",
+      "label": "Change in fair value of derivative instruments",
+      "value": 323,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:OtherComprehensiveIncomeDerivativesChangeInFairValue",
+      "label": "Change in fair value of derivative instruments",
+      "value": 3212,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:OtherComprehensiveIncomeDerivativesReclassificationToNetIncome",
+      "label": "Adjustment for net (gains)/losses realized and included in net income",
+      "value": -1337,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:OtherComprehensiveIncomeDerivativesReclassificationToNetIncome",
+      "label": "Adjustment for net (gains)/losses realized and included in net income",
+      "value": -1717,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:OtherComprehensiveIncomeDerivativesReclassificationToNetIncome",
+      "label": "Adjustment for net (gains)/losses realized and included in net income",
+      "value": -1074,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "UnrealizedGainsLossesDerivatives",
+      "concept": "us-gaap:OtherComprehensiveIncomeLossCashFlowHedgeGainLossNetOfTax",
+      "label": "Total change in unrealized gains/losses on derivative instruments",
+      "value": -2169,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "UnrealizedGainsLossesDerivatives",
+      "concept": "us-gaap:OtherComprehensiveIncomeLossCashFlowHedgeGainLossNetOfTax",
+      "label": "Total change in unrealized gains/losses on derivative instruments",
+      "value": -1394,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "UnrealizedGainsLossesDerivatives",
+      "concept": "us-gaap:OtherComprehensiveIncomeLossCashFlowHedgeGainLossNetOfTax",
+      "label": "Total change in unrealized gains/losses on derivative instruments",
+      "value": 2138,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:OtherComprehensiveIncomeAvailableForSaleSecuritiesChangeInFairValue",
+      "label": "Change in fair value of marketable debt securities",
+      "value": 5850,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:OtherComprehensiveIncomeAvailableForSaleSecuritiesChangeInFairValue",
+      "label": "Change in fair value of marketable debt securities",
+      "value": 1563,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:OtherComprehensiveIncomeAvailableForSaleSecuritiesChangeInFairValue",
+      "label": "Change in fair value of marketable debt securities",
+      "value": -12104,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:OtherComprehensiveIncomeAvailableForSaleSecuritiesReclassificationToNetIncome",
+      "label": "Adjustment for net (gains)/losses realized and included in net income",
+      "value": 204,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:OtherComprehensiveIncomeAvailableForSaleSecuritiesReclassificationToNetIncome",
+      "label": "Adjustment for net (gains)/losses realized and included in net income",
+      "value": 253,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": null,
+      "concept": "us-gaap:OtherComprehensiveIncomeAvailableForSaleSecuritiesReclassificationToNetIncome",
+      "label": "Adjustment for net (gains)/losses realized and included in net income",
+      "value": 205,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "UnrealizedGainsLossesSecurities",
+      "concept": "us-gaap:OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax",
+      "label": "Total change in unrealized gains/losses on marketable debt securities",
+      "value": 6054,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "UnrealizedGainsLossesSecurities",
+      "concept": "us-gaap:OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax",
+      "label": "Total change in unrealized gains/losses on marketable debt securities",
+      "value": 1816,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "UnrealizedGainsLossesSecurities",
+      "concept": "us-gaap:OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax",
+      "label": "Total change in unrealized gains/losses on marketable debt securities",
+      "value": -11899,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "OtherComprehensiveIncome",
+      "concept": "us-gaap:OtherComprehensiveIncomeLossNetOfTax",
+      "label": "Total other comprehensive income/(loss)",
+      "value": 4280,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "OtherComprehensiveIncome",
+      "concept": "us-gaap:OtherComprehensiveIncomeLossNetOfTax",
+      "label": "Total other comprehensive income/(loss)",
+      "value": -343,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "OtherComprehensiveIncome",
+      "concept": "us-gaap:OtherComprehensiveIncomeLossNetOfTax",
+      "label": "Total other comprehensive income/(loss)",
+      "value": -11272,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "ComprehensiveIncomeTotal",
+      "concept": "us-gaap:ComprehensiveIncomeNetOfTax",
+      "label": "Total comprehensive income",
+      "value": 98016,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2024",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "ComprehensiveIncomeTotal",
+      "concept": "us-gaap:ComprehensiveIncomeNetOfTax",
+      "label": "Total comprehensive income",
+      "value": 96652,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2023",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "ComprehensiveIncomeTotal",
+      "concept": "us-gaap:ComprehensiveIncomeNetOfTax",
+      "label": "Total comprehensive income",
+      "value": 88531,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "FY2022",
+      "statement": "ComprehensiveIncome",
+      "page": 33
+    },
+    {
+      "canonical": "CashAndEquivalents",
+      "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "label": "Cash and cash equivalents",
+      "value": 29943,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2024-09-28",
+      "statement": "BalanceSheet",
+      "page": 34
+    },
+    {
+      "canonical": "CashAndEquivalents",
+      "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "label": "Cash and cash equivalents",
+      "value": 29965,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2023-09-30",
+      "statement": "BalanceSheet",
+      "page": 34
+    },
+    {
+      "canonical": "ShortTermInvestments",
+      "concept": "us-gaap:MarketableSecuritiesCurrent",
+      "label": "Marketable securities",
+      "value": 35228,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2024-09-28",
+      "statement": "BalanceSheet",
+      "page": 34
+    },
+    {
+      "canonical": "ShortTermInvestments",
+      "concept": "us-gaap:MarketableSecuritiesCurrent",
+      "label": "Marketable securities",
+      "value": 31590,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2023-09-30",
+      "statement": "BalanceSheet",
+      "page": 34
+    },
+    {
+      "canonical": "AccountsReceivableNet",
+      "concept": "us-gaap:AccountsReceivableNetCurrent",
+      "label": "Accounts receivable, net",
+      "value": 33410,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2024-09-28",
+      "statement": "BalanceSheet",
+      "page": 34
+    },
+    {
+      "canonical": "AccountsReceivableNet",
+      "concept": "us-gaap:AccountsReceivableNetCurrent",
+      "label": "Accounts receivable, net",
+      "value": 29508,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2023-09-30",
+      "statement": "BalanceSheet",
+      "page": 34
+    },
+    {
+      "canonical": "OtherReceivables",
+      "concept": "custom:VendorNonTradeReceivables",
+      "label": "Vendor non-trade receivables",
+      "value": 32833,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2024-09-28",
+      "statement": "BalanceSheet",
+      "page": 34
+    },
+    {
+      "canonical": "OtherReceivables",
+      "concept": "custom:VendorNonTradeReceivables",
+      "label": "Vendor non-trade receivables",
+      "value": 31477,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2023-09-30",
+      "statement": "BalanceSheet",
+      "page": 34
+    },
+    {
+      "canonical": "Inventory",
+      "concept": "us-gaap:InventoryNet",
+      "label": "Inventories",
+      "value": 7286,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2024-09-28",
+      "statement": "BalanceSheet",
+      "page": 34
+    },
+    {
+      "canonical": "Inventory",
+      "concept": "us-gaap:InventoryNet",
+      "label": "Inventories",
+      "value": 6331,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2023-09-30",
+      "statement": "BalanceSheet",
+      "page": 34
+    },
+    {
+      "canonical": "OtherCurrentAssets",
+      "concept": "us-gaap:OtherAssetsCurrent",
+      "label": "Other current assets",
+      "value": 14287,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2024-09-28",
+      "statement": "BalanceSheet",
+      "page": 34
+    },
+    {
+      "canonical": "OtherCurrentAssets",
+      "concept": "us-gaap:OtherAssetsCurrent",
+      "label": "Other current assets",
+      "value": 14695,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2023-09-30",
+      "statement": "BalanceSheet",
+      "page": 34
+    },
+    {
+      "canonical": "TotalCurrentAssets",
+      "concept": "us-gaap:AssetsCurrent",
+      "label": "Total current assets",
+      "value": 152987,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2024-09-28",
+      "statement": "BalanceSheet",
+      "page": 34
+    },
+    {
+      "canonical": "TotalCurrentAssets",
+      "concept": "us-gaap:AssetsCurrent",
+      "label": "Total current assets",
+      "value": 143566,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2023-09-30",
+      "statement": "BalanceSheet",
+      "page": 34
+    },
+    {
+      "canonical": "LongTermInvestments",
+      "concept": "us-gaap:MarketableSecuritiesNoncurrent",
+      "label": "Marketable securities",
+      "value": 91479,
+      "unit": "USD",
+      "scale": "millions",
+      "period": "instant_2024-09-28",
+      "statement": "BalanceSheet",
+      "page": 34
+    }
+  ]
+}

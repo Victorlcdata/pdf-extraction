@@ -1,0 +1,6 @@
+# Pick the SDK(s) for the provider(s) you'll use. None are required by default.
+# Or install everything via `pip install -e .[all]` from pyproject.toml.
+
+anthropic>=0.39       # Anthropic Claude
+# google-genai>=0.3   # Google Gemini      — uncomment to enable
+# openai>=1.50        # OpenAI GPT         — uncomment to enable

@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-extraction"
+version = "0.1.0"
+description = "Extract XBRL-style financial facts from annual report PDFs using an LLM."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Proprietary"}
+authors = [{name = "Victor Le Chevalier"}]
+keywords = ["xbrl", "10-k", "annual-report", "financial-data", "llm", "pdf"]
+
+# Core dependencies — none are required by default. Install only the SDK(s)
+# you'll actually use via the optional extras below.
+dependencies = []
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.39"]
+google    = ["google-genai>=0.3"]
+openai    = ["openai>=1.50"]
+# Convenience: install all three SDKs at once.
+all = ["anthropic>=0.39", "google-genai>=0.3", "openai>=1.50"]
+# Dev tooling.
+dev = ["pytest>=7", "ruff>=0.5"]
+
+[project.scripts]
+extract-financials = "pdf_extraction.cli:main"
+
+[project.urls]
+Documentation = "file://./README.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]   # line length handled by formatter

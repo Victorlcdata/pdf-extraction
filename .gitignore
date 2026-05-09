@@ -12,11 +12,16 @@ dist/
 venv/
 env/
 
-# Editor
+# Editor / OS
 .vscode/
 .idea/
 *.swp
 .DS_Store
+
+# Tool caches
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
 
 # Secrets
 .env

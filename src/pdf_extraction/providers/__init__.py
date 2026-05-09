@@ -7,8 +7,14 @@ from .openai_provider import OpenAIProvider
 
 PROVIDERS: dict[str, type[Provider]] = {
     "anthropic": AnthropicProvider,
-    "google":    GoogleProvider,
-    "openai":    OpenAIProvider,
+    "google": GoogleProvider,
+    "openai": OpenAIProvider,
 }
 
-__all__ = ["Provider", "AnthropicProvider", "GoogleProvider", "OpenAIProvider", "PROVIDERS"]
+__all__ = [
+    "Provider",
+    "AnthropicProvider",
+    "GoogleProvider",
+    "OpenAIProvider",
+    "PROVIDERS",
+]

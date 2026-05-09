@@ -37,6 +37,59 @@ pdf-extraction/
 
 The two top-level files `extract_financials.py` and `canonical_taxonomy.py` are thin compatibility shims kept so old commands and imports still work — new code should use the package instead.
 
+## Data workflow
+
+```mermaid
+flowchart TB
+    subgraph Inputs
+        PDFs["PDF files in<br/>data/input/*.pdf"]
+        Tax["TAXONOMY<br/>(taxonomy.py — 134 concepts)"]
+    end
+
+    PDFs -->|one at a time| CLI["CLI<br/>(cli.py)<br/>argparse + batch loop"]
+    Tax -.injected into prompt.-> Prompt
+
+    CLI -->|builds prompt| Prompt["build_prompt()<br/>(prompt.py)"]
+    Prompt --> Provider{"Provider<br/>--provider flag"}
+
+    Provider -->|anthropic| Anthropic["AnthropicProvider<br/>messages.with_raw_response.create()"]
+    Provider -->|google| Google["GoogleProvider<br/>generate_content()"]
+    Provider -->|openai| OpenAI["OpenAIProvider<br/>responses.with_raw_response.create()"]
+
+    Anthropic --> Result["ProviderResult<br/>{text, input_tokens,<br/>output_tokens, rate_limit}"]
+    Google --> Result
+    OpenAI --> Result
+
+    Result -->|raw text| Parser["parse_response()<br/>1. direct json.loads<br/>2. strip ```json fences<br/>3. extract outermost {...}<br/>4. salvage truncated facts"]
+
+    Parser -->|parsed dict| Validator["validate_canonicals()<br/>check facts vs TAXONOMY"]
+    Tax -.validation list.-> Validator
+
+    Validator --> JSON["data/output/<br/>TICKER_FY2024.facts.json"]
+
+    Result -->|tokens, rate_limit| Outcome["ExtractionOutcome<br/>{status, elapsed,<br/>facts counts, tokens,<br/>rate_limit, error}"]
+    Validator --> Outcome
+    Parser -.parse error.-> Debug["data/output/_debug/<br/>STEM.raw_response.txt"]
+    Parser -.parse error.-> Outcome
+
+    Outcome -->|append one line| Logger["RunLogger.record()<br/>(run_log.py)"]
+    Logger --> RunLog["data/output/<br/>run_log.jsonl<br/>(append-only)"]
+
+    Logger -->|end of batch| Summary["stdout summary<br/>totals + rate-limit window"]
+
+    classDef io fill:#e8f4fd,stroke:#1f77b4,stroke-width:1px,color:#000
+    classDef code fill:#fff5e6,stroke:#ff7f0e,stroke-width:1px,color:#000
+    classDef out fill:#e6f5e6,stroke:#2ca02c,stroke-width:1px,color:#000
+    classDef err fill:#fde6e6,stroke:#d62728,stroke-width:1px,color:#000
+
+    class PDFs,Tax,JSON,RunLog,Summary,Debug io
+    class CLI,Prompt,Provider,Anthropic,Google,OpenAI,Parser,Validator,Logger code
+    class Result,Outcome out
+    class Debug err
+```
+
+The same outcome object feeds both the human-readable JSON file (one per PDF) and the JSONL run log (one line per PDF). The taxonomy is read once and used in two places: it is injected into the prompt so the LLM sees the canonical names it can pick from, and it is used to validate the canonical names that come back.
+
 ## How traceability works
 
 Every fact carries three name fields:
@@ -75,6 +128,8 @@ So if you ask "what's the revenue line for Apple, LVMH, and Toyota?", you can jo
 
    Editable mode (`-e`) means edits to files in `src/` take effect immediately without reinstalling.
 
+   **This step is what creates the `extract-financials` command** in your venv's `bin/`. If you skip it, your shell will say `zsh: command not found: extract-financials`. See the next section if you'd rather run the tool without installing.
+
 4. **Set your API key(s).** Copy `.env.example` to `.env`, fill in the keys you need, then load them into your shell:
 
    ```bash
@@ -90,12 +145,27 @@ So if you ask "what's the revenue line for Apple, LVMH, and Toyota?", you can jo
 ```bash
 cd "/path/to/pdf extraction"
 source .venv/bin/activate
-extract-financials data/input --out-dir data/output
+extract-financials data/input --out-dir data/output    # short form (after pip install -e .)
+# or, if you skipped the install step:
+python extract_financials.py data/input --out-dir data/output
 ```
 
 `deactivate` returns your shell to the system Python.
 
 ## Usage
+
+There are **three equivalent ways** to invoke the tool. Pick whichever works in your setup:
+
+| Form | When it works | Example |
+|---|---|---|
+| `extract-financials …` | Only after `pip install -e ".[…]"` (creates the console script in the venv). Cleanest. | `extract-financials data/input` |
+| `python -m pdf_extraction …` | After install, OR with the venv active (the `src/` layout is on `sys.path` once installed). | `python -m pdf_extraction data/input` |
+| `python extract_financials.py …` | Always works — the root-level shim adds `src/` to `sys.path` itself. No install needed. | `python extract_financials.py data/input` |
+
+> **`zsh: command not found: extract-financials`?**
+> You haven't run `pip install -e ".[anthropic]"` (or you ran it in a different venv). Either run that install now, or fall back to `python extract_financials.py …` which works without installing.
+
+The rest of this section uses `extract-financials` for brevity, but every example works with all three forms.
 
 ```bash
 # Default: Anthropic Claude Sonnet
@@ -104,6 +174,10 @@ extract-financials data/input
 
 # Override the output folder explicitly
 extract-financials data/input --out-dir my_results/
+
+# Use Gemini Pro (full model id also accepted)
+extract-financials data/input --provider google --model gemini-2.5-pro
+extract-financials data/input --provider google --model pro     # alias for the same
 
 # Use Gemini Flash (cheapest)
 extract-financials data/input --provider google --model flash
@@ -121,6 +195,12 @@ extract-financials data/input --skip-existing
 extract-financials data/input --max-tokens 64000
 ```
 
+If the short `extract-financials` form doesn't work, swap it for `python extract_financials.py` and the same flags apply, e.g.:
+
+```bash
+python extract_financials.py data/input --provider google --model gemini-2.5-pro
+```
+
 ### Output behavior
 
 * On success: writes `<TICKER>_FY<YEAR>.facts.json` to the output folder.
@@ -132,6 +212,106 @@ extract-financials data/input --max-tokens 64000
   with the higher budget to get the complete set.
 * If the response is fundamentally unparseable, the raw text is dumped to
   `<out_dir>/_debug/<stem>.raw_response.txt` for inspection.
+
+### Run log
+
+Every batch run appends a JSONL log (one line per PDF) to `<out_dir>/run_log.jsonl`
+by default — override with `--log-file path/to/log.jsonl`. The log is append-only
+across runs so you can analyze throughput, token spend, and failure patterns
+over time.
+
+Each record carries two timestamps in UTC ISO-8601 with millisecond precision:
+`started_at` (when the API call began) and `timestamp` (when the record was
+written, ≈ `started_at + elapsed_seconds`).
+
+```jsonc
+{
+  "timestamp":         "2026-05-09T13:45:32.418Z",   // record written
+  "started_at":        "2026-05-09T13:44:45.092Z",   // API call began
+  "pdf":               "apple_fy2024_10k.pdf",
+  "pdf_size_bytes":    1093835,
+  "provider":          "anthropic",
+  "model":             "claude-sonnet-4-6",
+  "elapsed_seconds":   47.32,
+  "status":            "success",                    // success | skipped | parse_error | api_error
+  "facts_total":       985,
+  "facts_canonical":   612,
+  "facts_dimensioned": 80,
+  "tokens_input":      32140,
+  "tokens_output":     18432,
+  "tokens_total":      50572,
+  "rate_limit": {
+    // Populated from response headers when the provider exposes them.
+    // Anthropic and OpenAI return per-minute window info on every response;
+    // Google's SDK doesn't surface these headers, so this object is {} for Gemini.
+    // VALUES SHOWN HERE ARE PLACEHOLDERS — your numbers come straight from the
+    // actual response. They reset every minute (it is a rate-limit window,
+    // NOT remaining account credit).
+    "tokens_remaining":   "<int from header>",
+    "tokens_limit":       "<int from header>",
+    "requests_remaining": "<int from header>",
+    "requests_limit":     "<int from header>"
+  },
+  "output_file":       "AAPL_FY2024.facts.json",
+  "truncated":         false,
+  "error":             null
+}
+```
+
+The token counts (`tokens_input` / `tokens_output` / `tokens_total`) come
+directly from each provider's `usage` field on the response — these are real
+per-request metrics, not estimates.
+
+> **Why no remaining-credit field?** None of the three LLM providers expose
+> account credit balance through their public APIs. They only return
+> per-request usage (recorded as `tokens_*`) and per-minute rate-limit windows
+> (recorded as `rate_limit.*`). For real remaining account credit, log into
+> the provider billing dashboard.
+
+At the end of every batch the CLI prints a summary like:
+
+```
+============================================================
+Run summary  (3 PDFs processed)
+============================================================
+  Succeeded:        3
+  Failed:           0
+  Skipped:          0
+  Total elapsed:    142s
+  Total tokens in:  96,420
+  Total tokens out: 55,300
+  Total tokens:     151,720
+  Total facts:      2,940 (1,830 canonical-mapped)
+  Run log:          data/output/run_log.jsonl
+
+Rate-limit window after final request (current minute):
+  tokens_remaining:      <from header>
+  tokens_limit:          <from header>
+  ...
+
+ℹ Account credit balance is not exposed by Anthropic / Google / OpenAI APIs.
+  Check your provider billing dashboard for remaining account credit.
+```
+
+### Analyzing the log
+
+```bash
+# Total tokens spent on a recent batch
+jq -s 'map(.tokens_total) | add' data/output/run_log.jsonl
+
+# Average elapsed time per successful PDF
+jq -s '[.[] | select(.status == "success") | .elapsed_seconds] | add / length' data/output/run_log.jsonl
+
+# Find the slowest filing
+jq -s 'max_by(.elapsed_seconds) | {pdf, elapsed_seconds, tokens_total}' data/output/run_log.jsonl
+
+# Throughput in pandas
+python3 -c "
+import json, pandas as pd
+df = pd.DataFrame(json.loads(line) for line in open('data/output/run_log.jsonl'))
+print(df.groupby('status').agg({'elapsed_seconds':'sum','tokens_total':'sum'}))
+"
+```
 
 If you skipped step 3 above (`pip install -e .`), you can still run via the module path: `python -m pdf_extraction data/input`.
 
@@ -266,8 +446,41 @@ The next run will let the LLM choose `FreeCashFlow`. If a fact has no good canon
 
 ## Development
 
+This project uses **black** as the formatter and **ruff** as the linter. They are configured in `pyproject.toml` to play nicely together — black handles formatting, ruff only lints (its formatting rules that overlap with black are disabled). Don't run `ruff format`, it will fight black.
+
+Install both (plus pytest) into your active venv:
+
 ```bash
-pip install -e ".[dev]"            # adds pytest + ruff
-ruff check src/                    # lint
-ruff format src/                   # format
+pip install -e ".[dev]"            # pulls in black, ruff, pytest
+```
+
+Day-to-day commands:
+
+```bash
+black .                            # format every file in place
+ruff check .                       # lint
+ruff check . --fix                 # lint and auto-fix what ruff can
+pytest                             # run tests (when present)
+```
+
+A typical pre-commit sequence is `black . && ruff check . --fix`. Both tools share the same `line-length = 100` and `target-version = py310`, and both skip `examples/`, `data/`, and `.venv/`.
+
+If you want a single command that does everything, add this to your shell:
+
+```bash
+alias lint='black . && ruff check . --fix'
+```
+
+### Pre-commit hook (optional)
+
+To run black + ruff automatically on every `git commit`, drop a `.pre-commit-config.yaml` like this in the repo root and `pre-commit install`:
+
+```yaml
+repos:
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
+    hooks: [{id: black}]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.7.0
+    hooks: [{id: ruff, args: [--fix]}]
 ```

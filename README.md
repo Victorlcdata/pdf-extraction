@@ -7,8 +7,7 @@ Extract XBRL-style financial facts from a folder of annual report PDFs (US 10-Ks
 ```
 pdf-extraction/
 ├── README.md
-├── pyproject.toml             # package metadata + console-script entry point
-├── requirements.txt           # alternative install path
+├── pyproject.toml             # package metadata, dependencies, console-script entry point
 ├── .env.example               # template for API-key env vars
 ├── .gitignore
 ├── src/
@@ -29,13 +28,11 @@ pdf-extraction/
 │   ├── input/                 # drop your PDFs here
 │   │   └── apple_fy2024_10k.pdf
 │   └── output/                # JSON files land here
-├── examples/
-│   └── apple_fy2024_10k_facts.json   # reference output (hand-built)
-└── reference/
-    └── build_xbrl_json.py     # original Apple-only extractor (historical)
+└── examples/
+    └── AAPL_FY2024.facts.json   # reference output (hand-built)
 ```
 
-The two top-level files `extract_financials.py` and `canonical_taxonomy.py` are thin compatibility shims kept so old commands and imports still work — new code should use the package instead.
+The top-level file `extract_financials.py` is a thin shim that adds `src/` to `sys.path` and forwards to the package CLI — useful when you haven't run `pip install -e .` and just want to run the script directly. New code should import from the `pdf_extraction` package.
 
 ## Data workflow
 
@@ -372,7 +369,7 @@ You can also pass any full model id (e.g. `--model claude-opus-4-6`) for models 
 }
 ```
 
-A reference output (985 facts, hand-checked against the printed Apple 10-K) lives in `examples/apple_fy2024_10k_facts.json`.
+A reference output (985 facts, hand-checked against the printed Apple 10-K) lives in `examples/AAPL_FY2024.facts.json`.
 
 ## Cross-company analysis
 

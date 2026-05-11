@@ -24,6 +24,9 @@ Canonical record shape:
       "facts_total":       985,
       "facts_canonical":   612,
       "facts_dimensioned": 80,
+      "facts_concept_invalid": 4,                    // concepts not in authoritative XBRL list
+      "facts_canonical_from_map": 540,                // canonicals assigned by the static concept map
+      "facts_canonical_disagreements": 22,            // subset where the LLM had a different opinion
       "tokens_input":      32140,
       "tokens_output":     18432,
       "tokens_total":      50572,
@@ -90,4 +93,11 @@ class RunLogger:
             "total_tokens": sum(r.get("tokens_total", 0) for r in self._records),
             "total_facts": sum(r.get("facts_total", 0) for r in successes),
             "total_canonical": sum(r.get("facts_canonical", 0) for r in successes),
+            "total_concept_invalid": sum(r.get("facts_concept_invalid", 0) for r in successes),
+            "total_canonical_from_map": sum(
+                r.get("facts_canonical_from_map", 0) for r in successes
+            ),
+            "total_canonical_disagreements": sum(
+                r.get("facts_canonical_disagreements", 0) for r in successes
+            ),
         }

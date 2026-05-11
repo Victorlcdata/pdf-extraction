@@ -52,10 +52,17 @@ NAMING RULES (THIS IS CRITICAL):
 1. `canonical` — pick the BEST match from the canonical taxonomy below. If
    no canonical concept fits (e.g. company-specific KPI, niche disclosure),
    set `canonical` to null. Do NOT invent canonical names not in the list.
-2. `concept` — the native taxonomy tag the company would use:
-     us-gaap:* for US GAAP filings
-     ifrs:*    for IFRS filings
-     custom:*  for company-specific items (segments, product lines, non-GAAP)
+2. `concept` — the native taxonomy tag the company would use. You MUST pick
+   the tag from the relevant *official* taxonomy. Do not invent tags that
+   look plausible but are not real members of these taxonomies. If you are
+   uncertain a tag exists, use `custom:*` instead.
+     us-gaap:*    — official US-GAAP taxonomy maintained by FASB
+                    (used in 10-K / 10-Q / 8-K filings).
+     ifrs-full:*  — official IFRS taxonomy maintained by the IFRS Foundation
+                    (used by IFRS filers; `ifrs:*` is accepted as a synonym).
+     dei:*        — SEC Document Entity Information cover-page tags.
+     custom:*     — company-specific items not present in any official
+                    taxonomy (segments, product lines, non-GAAP KPIs).
 3. `label` — the EXACT text printed in the report, including the original
    language (don't translate "Chiffre d'affaires" to "Revenue").
 

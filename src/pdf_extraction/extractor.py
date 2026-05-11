@@ -13,6 +13,7 @@ from .prompt import build_prompt
 from .providers import Provider
 from .run_log import RunLogger, utc_now_iso_ms
 from .taxonomy import canonical_names
+from .xbrl_taxonomies import apply_concept_map, is_valid_concept, validate_concepts
 
 # ============================================================================
 # JSON parsing helpers (robust against markdown wrappers and truncation)
@@ -160,6 +161,37 @@ def safe_filename(entity: dict, filing: dict, fallback: str) -> str:
     return f"{base}_FY{fy}.facts.json" if fy else f"{base}.facts.json"
 
 
+def write_observations(
+    facts: list[dict],
+    *,
+    pdf_name: str,
+    started_at: str,
+    observations_path: Path,
+) -> None:
+    """Append one observation per fact to observations.jsonl for the learning loop.
+
+    Each line is a compact JSON record capturing the (concept, label, canonical,
+    statement, period, unit) tuple plus a validity tag. Downstream tools
+    (Phase 3) aggregate across many runs to propose new canonical entries.
+    """
+    observations_path.parent.mkdir(parents=True, exist_ok=True)
+    with observations_path.open("a", encoding="utf-8") as f:
+        for fact in facts:
+            concept = fact.get("concept")
+            obs = {
+                "ts": started_at,
+                "pdf": pdf_name,
+                "concept": concept,
+                "label": fact.get("label"),
+                "statement": fact.get("statement"),
+                "canonical": fact.get("canonical"),
+                "period": fact.get("period"),
+                "unit": fact.get("unit"),
+                "concept_valid": is_valid_concept(concept) if concept else None,
+            }
+            f.write(json.dumps(obs, ensure_ascii=False) + "\n")
+
+
 # ============================================================================
 # Per-PDF pipeline
 # ============================================================================
@@ -182,6 +214,12 @@ class ExtractionOutcome:
     facts_total: int = 0
     facts_canonical: int = 0
     facts_dimensioned: int = 0
+    facts_concept_invalid: int = 0
+    """Facts whose ``concept`` is in a tracked namespace but not in the authoritative list."""
+    facts_canonical_from_map: int = 0
+    """Facts whose ``canonical`` was set (or confirmed) by the static concept→canonical map."""
+    facts_canonical_disagreements: int = 0
+    """Subset of `facts_canonical_from_map` where the LLM's original choice differed."""
     tokens_input: int = 0
     tokens_output: int = 0
     tokens_total: int = 0
@@ -205,6 +243,9 @@ class ExtractionOutcome:
             "facts_total": self.facts_total,
             "facts_canonical": self.facts_canonical,
             "facts_dimensioned": self.facts_dimensioned,
+            "facts_concept_invalid": self.facts_concept_invalid,
+            "facts_canonical_from_map": self.facts_canonical_from_map,
+            "facts_canonical_disagreements": self.facts_canonical_disagreements,
             "tokens_input": self.tokens_input,
             "tokens_output": self.tokens_output,
             "tokens_total": self.tokens_total,
@@ -283,14 +324,36 @@ def process_pdf(
             "complete facts; re-run with --max-tokens 64000 to get the full set."
         )
 
+    facts = data.get("facts", []) or []
+
+    # Apply the static concept→canonical map first. For any fact whose `concept`
+    # is in the map, this overrides the LLM's `canonical` with the map's answer
+    # so the mapping is consistent across runs. No-op when the map file is absent.
+    n_from_map, disagreements = apply_concept_map(facts)
+    outcome.facts_canonical_from_map = n_from_map
+    outcome.facts_canonical_disagreements = len(disagreements)
+    if disagreements:
+        samples = [
+            f"{c} (LLM={llm!r} → map={mp!r})" for c, llm, mp in disagreements[:3]
+        ]
+        log(f"  ◇ {len(disagreements)} concept-map override(s): {samples}")
+
     bad = validate_canonicals(data, canonical_names())
     if bad:
         log(f"  ⚠ {len(bad)} unknown canonical name(s): {bad[:5]}")
 
-    facts = data.get("facts", []) or []
     outcome.facts_total = len(facts)
     outcome.facts_canonical = sum(1 for f in facts if f.get("canonical"))
     outcome.facts_dimensioned = sum(1 for f in facts if f.get("dimensions"))
+
+    invalid_count, invalid_samples = validate_concepts(facts)
+    outcome.facts_concept_invalid = invalid_count
+    if invalid_count:
+        log(
+            f"  ⚠ {invalid_count} concept(s) not in authoritative taxonomy: "
+            f"{invalid_samples[:5]}"
+        )
+
     outcome.data = data
     outcome.status = "success"
 
@@ -308,6 +371,13 @@ def process_pdf(
     out_path.write_text(json.dumps(data, indent=2, ensure_ascii=False))
     outcome.output_file = out_path.name
     log(f"  → wrote {out_path.name}")
+
+    write_observations(
+        facts,
+        pdf_name=pdf_path.name,
+        started_at=outcome.started_at,
+        observations_path=out_dir / "observations.jsonl",
+    )
 
     if run_logger:
         run_logger.record(**outcome.to_log_record())

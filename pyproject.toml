@@ -27,6 +27,7 @@ dev = ["pytest>=7", "ruff>=0.5", "black>=24"]
 
 [project.scripts]
 extract-financials = "pdf_extraction.cli:main"
+learn-taxonomy = "pdf_extraction.learn:main"
 
 [project.urls]
 Documentation = "file://./README.md"

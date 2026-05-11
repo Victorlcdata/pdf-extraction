@@ -15,7 +15,7 @@ from .run_log import RunLogger, utc_now_iso_ms
 
 DEFAULT_MODEL_PER_PROVIDER = {
     "anthropic": "sonnet",
-    "google": "flash",
+    "google": "pro",
     "openai": "gpt5mini",
 }
 
@@ -35,8 +35,8 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--provider",
         choices=sorted(PROVIDERS),
-        default="anthropic",
-        help="LLM provider (default: anthropic)",
+        default="google",
+        help="LLM provider (default: google)",
     )
     parser.add_argument(
         "--model",
@@ -115,6 +115,14 @@ def _print_summary(summary: dict, log_path: Path, last_rate_limit: dict | None) 
     print(f"  Total tokens:     {summary['total_tokens']:,}")
     print(
         f"  Total facts:      {summary['total_facts']:,} ({summary['total_canonical']:,} canonical-mapped)"
+    )
+    print(
+        f"  Concept-invalid:  {summary['total_concept_invalid']:,} "
+        f"(tags not in authoritative XBRL list — see data/taxonomies/)"
+    )
+    print(
+        f"  From concept map: {summary['total_canonical_from_map']:,} canonicals "
+        f"set by static map ({summary['total_canonical_disagreements']:,} LLM disagreements)"
     )
     print(f"  Run log:          {log_path}")
 

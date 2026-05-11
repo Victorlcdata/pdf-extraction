@@ -1,0 +1,163 @@
+{
+  "user_agent": "pdf-extraction taxonomy-fetcher (victor.lc@omaha-insights.com)",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/",
+  "filers": {
+    "0000320193": {
+      "label": "Apple \u2014 tech",
+      "entity": "Apple Inc.",
+      "counts": {
+        "dei": 2,
+        "us-gaap": 503
+      }
+    },
+    "0000789019": {
+      "label": "Microsoft \u2014 tech/cloud",
+      "entity": "MICROSOFT CORPORATION",
+      "counts": {
+        "dei": 3,
+        "us-gaap": 544
+      }
+    },
+    "0001318605": {
+      "label": "Tesla \u2014 auto",
+      "entity": "Tesla,\u00a0Inc.",
+      "counts": {
+        "dei": 2,
+        "us-gaap": 642,
+        "ffd": 4
+      }
+    },
+    "0000019617": {
+      "label": "JPMorgan Chase \u2014 bank",
+      "entity": "JPMORGAN CHASE & CO",
+      "counts": {
+        "dei": 2,
+        "invest": 1,
+        "srt": 2,
+        "us-gaap": 917,
+        "ffd": 6,
+        "ecd": 7
+      }
+    },
+    "0000886982": {
+      "label": "Goldman Sachs \u2014 investment bank",
+      "entity": "The Goldman Sachs Group, Inc.",
+      "counts": {
+        "dei": 2,
+        "invest": 1,
+        "srt": 2,
+        "us-gaap": 638,
+        "ffd": 1
+      }
+    },
+    "0001067983": {
+      "label": "Berkshire Hathaway \u2014 conglomerate/insurance",
+      "entity": "BERKSHIRE HATHAWAY INC",
+      "counts": {
+        "dei": 2,
+        "us-gaap": 437,
+        "ffd": 6
+      }
+    },
+    "0000078003": {
+      "label": "Pfizer \u2014 pharma",
+      "entity": "Pfizer Inc.",
+      "counts": {
+        "dei": 2,
+        "us-gaap": 666,
+        "srt": 1,
+        "ffd": 4
+      }
+    },
+    "0000034088": {
+      "label": "ExxonMobil \u2014 oil & gas",
+      "entity": "Exxon Mobil Corporation",
+      "counts": {
+        "dei": 2,
+        "us-gaap": 438,
+        "ecd": 7
+      }
+    },
+    "0000080424": {
+      "label": "Procter & Gamble \u2014 consumer goods",
+      "entity": "PROCTER & GAMBLE CO",
+      "counts": {
+        "dei": 2,
+        "invest": 1,
+        "us-gaap": 448
+      }
+    },
+    "0000104169": {
+      "label": "Walmart \u2014 retail",
+      "entity": "Walmart Inc.",
+      "counts": {
+        "dei": 2,
+        "invest": 1,
+        "us-gaap": 478,
+        "ecd": 7,
+        "ffd": 6
+      }
+    },
+    "0000012927": {
+      "label": "Boeing \u2014 aerospace/defense",
+      "entity": "THE BOEING COMPANY",
+      "counts": {
+        "dei": 2,
+        "invest": 1,
+        "us-gaap": 742
+      }
+    },
+    "0001403161": {
+      "label": "Visa \u2014 payments",
+      "entity": "VISA INC.",
+      "counts": {
+        "dei": 2,
+        "invest": 1,
+        "us-gaap": 625,
+        "srt": 1,
+        "ffd": 5
+      }
+    },
+    "0001018724": {
+      "label": "Amazon \u2014 retail/cloud",
+      "entity": "AMAZON.COM, INC.",
+      "counts": {
+        "dei": 2,
+        "us-gaap": 542,
+        "ecd": 3
+      }
+    },
+    "0001114448": {
+      "label": "Novartis \u2014 pharma (IFRS)",
+      "entity": "Novartis AG",
+      "counts": {
+        "dei": 1,
+        "ifrs-full": 295
+      }
+    },
+    "0000901832": {
+      "label": "AstraZeneca \u2014 pharma (IFRS)",
+      "entity": "ASTRAZENECA PLC",
+      "counts": {
+        "ifrs-full": 375
+      }
+    },
+    "0001121404": {
+      "label": "Sanofi \u2014 pharma (IFRS)",
+      "entity": "Sanofi",
+      "counts": {
+        "dei": 1,
+        "ifrs-full": 269
+      }
+    }
+  },
+  "namespace_totals": {
+    "dei": 3,
+    "us-gaap": 2849,
+    "ffd": 7,
+    "invest": 1,
+    "srt": 3,
+    "ecd": 7,
+    "ifrs-full": 591
+  }
+}
